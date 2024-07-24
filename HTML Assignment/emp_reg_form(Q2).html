@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 600px;
+        margin-left: 28%;
+        padding-top: 40px;
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+      }
+      img {
+        height: 80px;
+        width: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">
+      <img src="../HTML/images/employee.png" alt="" />
+      <!-- <i class="fa-solid fa-user" style="font-size: xx-large"></i> -->
+      <h1 style="color: red">Employee Registration Form</h1>
+    </div>
+    <div class="main">
+      <table>
+        <tr>
+          <td></td>
+          <td>
+            <input type="radio" name="abc" id="" />Mr.
+            <input type="radio" name="abc" id="" />Mrs.
+            <input type="radio" name="abc" id="" />Ms.
+          </td>
+        </tr>
+        <tr>
+          <td><label for="#">First Name</label></td>
+          <td><input type="text" placeholder="Enter First Name" /></td>
+        </tr>
+        <tr>
+          <td><label for="#">Last Name</label></td>
+          <td><input type="text" placeholder="Enter Last Name" /></td>
+        </tr>
+        <tr>
+          <td><label for="#">Mail Address1</label></td>
+          <td><input type="email" name="" id="" /></td>
+        </tr>
+        <tr>
+          <td><label for="#">Mail Address2</label></td>
+          <td><input type="email" name="" id="" /></td>
+        </tr>
+        <tr>
+          <td><label for="#">City</label></td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td><label for="#">State</label></td>
+          <td>
+            <select name="Gujrat" id="Gujrat">
+              <option value="Gujrat">Gujrat</option>
+              <option value="Maharastra">Maharastra</option>
+              <option value="Rajsthan">Rajsthan</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="#">Zip</label></td>
+          <td><input type="text" /></td>
+        </tr>
+        <tr>
+          <td><label for="#">Upload Photo</label></td>
+          <td><input type="file" name="" id="" /></td>
+        </tr>
+        <tr>
+          <td><label for="#">E-mail</label></td>
+          <td><input type="email" name="" id="" style="width: 250px" /></td>
+        </tr>
+        <tr>
+          <td><label for="#">Mobile</label></td>
+          <td><input type="tel" name="" id="" value="+91" maxlength="13" /></td>
+        </tr>
+        <tr>
+          <td><label for="#">Languenges Known</label></td>
+          <td><input type="checkbox" name="" id="" checked />Gujrati</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="checkbox" name="" id="" checked />Hindi</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="checkbox" name="" id="" checked />English</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="checkbox" name="" id="" />Marathi</td>
+        </tr>
+        <tr>
+          <td><label for="#">Additional Information</label></td>
+          <td>
+            <textarea
+              name=""
+              id=""
+              placeholder="Optional"
+              rows="4"
+              cols="30"
+            ></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

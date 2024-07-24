@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      .row {
+        height: 500px;
+        width: 550px;
+        background-color: white;
+        padding: 30px;
+        margin-left: 3px;
+        position: relative;
+        top: 20px;
+        font-family: serif;
+        border-radius: 10px;
+      }
+      .main {
+        height: 600px;
+        width: 620px;
+        background-color: cyan;
+        margin-left: 25%;
+        margin-top: 4%;
+        padding: 20px;
+      }
+      button {
+        width: 250px;
+        height: 30px;
+        background-color: orangered;
+        border-radius: 20px;
+        justify-content: center;
+        margin-left: 135px;
+        margin-top: 20px;
+        color: white;
+        border: none;
+        font-family: sans-serif;
+      }
+      hr {
+        width: 70%;
+        margin-right: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="row">
+        <form action="">
+          <span style="font-size: x-large; text-decoration: underline orangered"
+            ><b>Registration</b></span
+          ><br /><br />
+          <span>Personal Details</span>
+          <table cellspacing="5px">
+            <tr>
+              <td>Full Name</td>
+              <td>Father Name</td>
+              <td>Mother Name</td>
+            </tr>
+            <tr>
+              <td><input type="text" placeholder="Enter Your Name" /></td>
+              <td><input type="text" placeholder="Enter Father Name" /></td>
+              <td><input type="text" placeholder="Enter Mother Name" /></td>
+            </tr>
+            <table cellspacing="5px">
+              <tr>
+                <td>Date Of Birth</td>
+                <td>Full Name</td>
+                <td>Email</td>
+              </tr>
+              <tr>
+                <td><input type="text" placeholder="Enter your DOB" /></td>
+                <td><input type="text" placeholder="Enter Aadhar Number" /></td>
+                <td><input type="email" placeholder="Enter Your email" /></td>
+              </tr>
+            </table>
+            <table cellspacing="5px">
+              <tr>
+                <td>Mobile Number</td>
+                <td>Gender</td>
+                <td>Address</td>
+              </tr>
+              <tr>
+                <td><input type="text" placeholder="Enter mobile number" /></td>
+                <td><input type="text" placeholder="Enter your Gender" /></td>
+                <td><input type="text" placeholder="Enter your Address" /></td>
+              </tr>
+            </table>
+          </table>
+
+          <br />
+          <hr />
+          <br />
+          <span>Other Details</span>
+          <br /><br />
+          <table cellspacing="5px">
+            <tr>
+              <td>Stream</td>
+              <td>Previous Class</td>
+              <td>Hobbies</td>
+            </tr>
+            <tr>
+              <td><input type="text" placeholder="Enter Your Stream" /></td>
+              <td><input type="text" placeholder="Enter Previous Class" /></td>
+              <td><input type="text" placeholder="Enter Your Hobbies" /></td>
+            </tr>
+            <table cellspacing="5px">
+              <tr>
+                <td>Account Number</td>
+                <td>Religion</td>
+                <td>Catagory</td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" placeholder="Enter Account Number" />
+                </td>
+                <td><input type="text" placeholder="Enter Your Religion" /></td>
+                <td><input type="text" placeholder="Enter Your Catagory" /></td>
+              </tr>
+            </table>
+          </table>
+          <button>Submits</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

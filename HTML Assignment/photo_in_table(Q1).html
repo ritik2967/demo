@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <td rowspan="2"><a href="#">Home</a></td>
+        <td rowspan="2"><a href="#">About</a></td>
+        <td rowspan="2"><a href="#">Contact</a></td>
+        <td rowspan="2"><a href="#">Help</a></td>
+        <td rowspan="2"><a href="#">Store</a></td>
+        <td style="background-color: red"><a href="#">Home</a></td>
+      </tr>
+      <tr>
+        <td style="background-color: red"><a href="#">Home</a></td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <img
+            src="../HTML/images/2doors.jpg"
+            alt="No image"
+            style="width: 100%"
+            height="400px"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6" style="background-color: pink">
+          <a href="#">Contact-us-page</a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="6">
+          <img
+            src="../HTML/images/contactus.jpg"
+            alt="No Image"
+            style="width: 100%"
+            height="300px
+          "
+          />
+        </td>
+      </tr>
+      <tr style="background-color: cadetblue">
+        <td colspan="3">
+          First Name <input type="text" placeholder="Enter your name" />
+        </td>
+        <td colspan="3">
+          Last Name <input type="text" placeholder="Enter your name" />
+        </td>
+      </tr>
+      <tr style="background-color: cadetblue">
+        <td colspan="3">
+          Email-id <input type="email" placeholder="Enter your email" />
+        </td>
+        <td colspan="3">
+          Phone number
+          <input type="tel" placeholder="Enter your phone number" />
+        </td>
+      </tr>
+      <tr style="background-color: cadetblue">
+        <td colspan="3">
+          City
+          <select name="Ahmedabad" id="Ahmedabad">
+            <option value="Bhavnagar">Bhavnagar</option>
+            <option value="Surat">Surat</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+          </select>
+        </td>
+        <td colspan="3">
+          Gender: Male <input type="radio" name="abc" id="" /> Female
+          <input type="radio" name="abc" id="" /> Others
+          <input type="radio" name="abc" id="" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235014.29918790405!2d72.41493012913726!3d23.020158084541748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1721120589023!5m2!1sen!2sin"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </td>
+        <td colspan="3">
+          <iframe
+            width="100%"
+            height="450spx"
+            src="https://www.youtube.com/embed/kBk3RvQKvPo?si=YEsogTGBFOZT0TJs"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
