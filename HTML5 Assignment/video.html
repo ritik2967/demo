@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+        color: white;
+      }
+      .main {
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 45px;
+        padding: 50px;
+      }
+      .main > video {
+        height: 500px;
+        width: 80 0px;
+        border: 6px solid gray;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>HTML5 VIDEO</h1>
+      <video src="../HTML5/images/butterfly.mp4" controls loop></video>
+    </div>
+  </body>
+</html>
