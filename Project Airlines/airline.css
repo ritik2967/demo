@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul > li {
+  list-style: none;
+}
+
+.navbar {
+  height: auto;
+  width: auto;
+  background-color: #1b1b1b;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+.links > ul {
+  display: flex;
+  gap: 15px;
+}
+.plan-asset {
+  height: 550px;
+  width: auto;
+  background-image: url("./images/1.jpg");
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: black;
+  justify-content: space-around;
+  background-position: center;
+  background-size: cover;
+}
+.left-content {
+  height: auto;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.air-img {
+  height: auto;
+  width: 350px;
+}
+
+.cotainer {
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.booking-details {
+  height: auto;
+  width: 400px;
+  background-color: whitesmoke;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.type-select {
+  height: auto;
+  width: 300px;
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-content: space-evenly;
+  gap: 10px;
+}
+.table {
+  height: auto;
+  width: 300px;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 8px;
+}
+.living-fm {
+  width: 300px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+}
+.living-fm > input {
+  width: 280px;
+  height: 30px;
+  padding-left: 15px;
+}
+.goint-to-fm {
+  width: 300px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+}
+
+.goint-to-fm > input {
+  width: 280px;
+  height: 30px;
+  padding-left: 15px;
+}
+
+.departure-time > input {
+  width: 135px;
+  height: 30px;
+  padding-left: 15px;
+}
+
+.return-date > input {
+  width: 135px;
+  height: 30px;
+  padding-left: 15px;
+}
+
+.passengers {
+  height: auto;
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: -20px;
+}
+
+.passengers-count > input {
+  width: 135px;
+  height: 30px;
+  padding-left: 15px;
+}
+.go-btn > button {
+  height: 30px;
+  width: 60px;
+  background-color: rgb(61, 167, 208);
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.recent-news {
+  height: auto;
+  width: 280px;
+  margin-left: -20px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 15px;
+  padding-top: 40px;
+}
+.news-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.news-con-1 {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  font-family: cursive;
+}
+
+.airplan-information {
+  height: auto;
+  width: 800px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.airplan-content-para {
+  color: rgb(61, 167, 208);
+  font-family: cursive;
+}
+
+.aircraft {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.read-more-btn {
+  width: 800px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  text-align: end;
+}
+.read-more-btn > button {
+  height: 30px;
+  width: 150px;
+  background-color: #1b1b1b;
+  color: white;
+  border: none;
+  border-radius: 7px;
+}
+
+.charters {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feet-reserve-btn {
+  height: auto;
+  width: 800px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 8px;
+}
+.fleet {
+  height: 30px;
+  width: 90px;
+  background-color: rgb(61, 167, 208);
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+.reserve {
+  height: 30px;
+  width: 120px;
+  background-color: #1b1b1b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.our-clients {
+  height: auto;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.client-con-left {
+  height: auto;
+  width: 350px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 15px;
+  border-radius: 8px;
+}
+
+.blue-con-right {
+  height: auto;
+  width: 200px;
+  background-color: rgb(61, 167, 208);
+  color: white;
+  padding: 20px;
+}
+
+.end-name {
+  display: flex;
+  justify-content: end;
+  padding-top: 10 px;
+}
+
+.footer-section {
+  height: auto;
+  width: auto;
+  background-color: #1b1b1b;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  margin-top: 20px;
+}
