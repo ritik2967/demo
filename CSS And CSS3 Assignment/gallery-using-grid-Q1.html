@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: black;
+        color: white;
+      }
+      .container {
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .shutter {
+        height: auto;
+        width: 20%;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        flex-direction: column;
+        padding: 15px;
+        padding-bottom: 45vw;
+        gap: 10px;
+      }
+      .icons {
+        display: flex;
+        gap: 12px;
+      }
+      .main {
+        height: auto;
+        width: 80%;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        gap: 10px;
+      }
+      .main > div {
+        height: 200px;
+        border: 2px solid black;
+      }
+      .sub1 {
+        background-image: url(./images/1.avif);
+        background-position: bottom;
+        background-size: cover;
+        grid-row: 1;
+        grid-column: 1 / span 4;
+      }
+      .sub2 {
+        background-image: url(./images/2.jpg);
+        background-size: cover;
+        background-position: center;
+        grid-row: 1;
+        grid-column: 5 / span 2;
+      }
+      .sub3 {
+        background-image: url(./images/3.jpg);
+        background-size: cover;
+        background-position: center;
+        grid-row: 2;
+      }
+      .sub4 {
+        background-image: url(./images/4.jpg);
+        background-position: center;
+        background-size: cover;
+        grid-row: 2;
+        grid-column: 2 / span 4;
+      }
+      .sub5 {
+        background-image: url(./images/5.jpg);
+        background-position: center;
+        background-size: cover;
+        grid-row: 2;
+      }
+      .sub6 {
+        background-image: url(./images/6.webp);
+        background-position: center;
+        background-size: cover;
+        grid-row: 3;
+        grid-column: 1 / span 3;
+      }
+      .sub7 {
+        background-image: url(./images/7.jpg);
+        background-position: top;
+        background-size: cover;
+        grid-row: 3;
+        grid-column: 4 / span 3;
+      }
+      .sub8 {
+        background-image: url(./images/8.jpg);
+        background-position: top;
+        background-size: cover;
+        grid-row: 4;
+        grid-column: 1 / span 2;
+      }
+      .sub9 {
+        background-image: url(./images/9.jpeg);
+        background-position: center;
+        background-size: cover;
+        grid-row: 4;
+        grid-column: 3 / span 2;
+      }
+      .sub10 {
+        background-image: url(./images/10.jpg);
+        background-position: center;
+        background-size: cover;
+        grid-row: 4;
+        grid-column: 5 / span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <div class="sub1">img 1</div>
+        <div class="sub2">img 2</div>
+        <div class="sub3">img 3</div>
+        <div class="sub4">img 4</div>
+        <div class="sub5">img 5</div>
+        <div class="sub6">img 6</div>
+        <div class="sub7">img 7</div>
+        <div class="sub8">img 8</div>
+        <div class="sub9">img 9</div>
+        <div class="sub10">img 10</div>
+      </div>
+      <div class="shutter">
+        <h2>Shutter</h2>
+        <span style="color: orange">Home</span>
+        <span>Photos</span>
+        <span>Bio</span>
+        <span>Blog</span>
+        <span>Contact</span>
+
+        <div class="icons">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-square-twitter"></i>
+          <i class="fa-brands fa-square-instagram"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

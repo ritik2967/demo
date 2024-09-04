@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        position: relative;
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #242124;
+        color: white;
+        justify-content: space-between;
+      }
+      .left-content {
+        height: auto;
+        width: 50%;
+        display: flex;
+        justify-content: end;
+        align-items: end;
+        flex-direction: column;
+        text-align: end;
+        gap: 25px;
+        padding: 50px;
+      }
+      .wd {
+        height: auto;
+        width: 400px;
+      }
+      .bg-asset {
+        height: auto;
+        width: 50%;
+      }
+      .bg-asset > img {
+        height: 550px;
+        width: 730px;
+      }
+      .icons {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+        position: absolute;
+        left: 48.6%;
+      }
+      .icon1 {
+        height: 25px;
+        width: 35px;
+        background-color: white;
+        color: orangered;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-content">
+        <h1>OUR SERVICE <span style="color: orangered">|</span></h1>
+        <div class="wd">
+          <span style="color: orangered">WEB DESIGN</span>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+            nesciunt modi nam cumque illum unde.
+          </p>
+        </div>
+        <div class="wd">
+          <span style="color: orangered">WEB DESIGN</span>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia
+            magnam fuga minus, pariatur deserunt veritatis.
+          </p>
+        </div>
+        <div class="wd">
+          <span style="color: orangered">WEB DESIGN</span>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit magni,
+            nobis nam tenetur ea itaque!
+          </p>
+        </div>
+      </div>
+
+      <div class="icons">
+        <div class="icon1">
+          <i class="fa-solid fa-desktop"></i>
+        </div>
+        <div class="icon1">
+          <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="icon1">
+          <i class="fa-solid fa-camera"></i>
+        </div>
+      </div>
+
+      <div class="bg-asset">
+        <img src="./images/6.webp" alt="" />
+      </div>
+    </div>
+  </body>
+</html>

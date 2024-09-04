@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 550px;
+        width: auto;
+        color: white;
+        background-color: rgba(97, 0, 0, 0.564);
+      }
+      .top-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 85px;
+      }
+      .images > .image1 > img {
+        height: 50px;
+        width: 50px;
+        border: 2px solid red;
+        border-radius: 50%;
+      }
+      .images > .image2 > img {
+        height: 50px;
+        width: 50px;
+        border: 2px solid red;
+        border-radius: 50%;
+      }
+      .images > .image3 > img {
+        height: 50px;
+        width: 50px;
+        border: 2px solid red;
+        border-radius: 50%;
+      }
+      .images > .image4 > img {
+        height: 50px;
+        width: 50px;
+        border: 2px solid red;
+        border-radius: 50%;
+      }
+      .images > .image5 > img {
+        height: 50px;
+        width: 50px;
+        border: 2px solid red;
+        border-radius: 50%;
+      }
+      .images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+      .image1 > img {
+        position: absolute;
+        left: 150px;
+        top: 60px;
+      }
+      .image2 > img {
+        position: absolute;
+        left: 350px;
+        top: 35px;
+        box-shadow: 8px 5px 5px gray;
+      }
+      .image3 > img {
+        position: absolute;
+        left: 550px;
+        top: 45px;
+      }
+      .image4 > img {
+        position: absolute;
+        left: 750px;
+        top: 90px;
+      }
+      .image5 > img {
+        position: absolute;
+        left: 950px;
+        top: 120px;
+      }
+      .main {
+        position: absolute;
+        bottom: 300px;
+        left: 300px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top-content">
+        <h1>OUR TEAM</h1>
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+      </div>
+      <div class="images">
+        <div class="image1">
+          <img src="./images/1.avif" alt="" />
+        </div>
+        <div class="image2">
+          <img src="./images/3.jpg" alt="" />
+        </div>
+        <div class="image3">
+          <img src="./images/4.jpg" alt="" />
+        </div>
+        <div class="image4">
+          <img src="./images/5.jpg" alt="" />
+        </div>
+        <div class="image5">
+          <img src="./images/8.jpg" alt="" />
+        </div>
+      </div>
+      <div class="svg-curve">
+        <img src="./images/wave.svg" alt="" />
+        <div class="main">
+          <h2 style="color: orangered">WEB DESIGNER</h2>
+          <span>Web Devloper</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

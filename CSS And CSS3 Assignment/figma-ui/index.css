@@ -1,0 +1,252 @@
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.save-btns {
+  background-color: #81c43b;
+  height: 25px;
+  border: none;
+  width: 90px;
+  border-radius: 17px;
+  color: white;
+}
+.get-btn {
+  height: 25px;
+  width: 160px;
+  border: none;
+  border-radius: 17px;
+  color: #35414b;
+  background-color: #f2f9eb;
+}
+
+.top-content {
+  height: auto;
+
+  text-align: center;
+}
+.try-to-free > input {
+  height: 35px;
+  padding-left: 10px;
+  width: 300px;
+  border: 1px solid #e1e5ea;
+}
+.try-to-free > button {
+  height: 35px;
+  width: 150px;
+  background-color: #794cff;
+  color: white;
+  border: 1px solid #794cff;
+}
+
+.top-content > p {
+  width: 60%;
+}
+
+.chit-line {
+  margin: 10px 0 0 0;
+}
+
+.company-logo-asset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+}
+
+.company-logo-asset > img {
+  width: 10vw;
+}
+
+.timeline-img-survay-team {
+  height: auto;
+  width: auto;
+  background-color: #f0ebfa;
+  padding: 15px;
+}
+
+.team {
+  height: auto;
+  width: 100%;
+
+  background-color: #f6f3fc;
+  padding: 10px 12px;
+  border-left: 8px solid #794cff;
+}
+.resolve-issue {
+  height: auto;
+  width: 100%;
+
+  background-color: #f0ebfa;
+  padding: 10px 12px;
+  box-shadow: 1px 4px 1px rgba(234, 230, 230, 0.9);
+}
+.plan-1-1 {
+  height: auto;
+  width: 100%;
+
+  background-color: #f0ebfa;
+  padding: 10px 12px;
+  box-shadow: 1px 4px 1px rgba(234, 230, 230, 0.9);
+}
+.track-prograss {
+  height: auto;
+  width: 100%;
+
+  background-color: #f0ebfa;
+  padding: 10px 12px;
+  box-shadow: 1px 4px 1px rgba(234, 230, 230, 0.9);
+}
+
+.collaps-content {
+  height: auto;
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+.survay-test {
+  height: auto;
+  width: 20vw;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+.collabration {
+  height: auto;
+  width: 20vw;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+.main-graph {
+  height: auto;
+  width: auto;
+  background-color: #f0ebfa;
+}
+.work-everyday > button {
+  height: 35px;
+  width: 150px;
+  background-color: #794cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+.cs-student {
+  border-top: 6px solid #35414b;
+}
+.adverticement {
+  height: auto;
+  width: auto;
+  background-color: #794cff;
+  color: white;
+}
+
+.footer-section {
+  height: auto;
+  width: auto;
+  background-color: #1d2830;
+  color: #f0ebfa;
+}
+
+.footer-content {
+  height: auto;
+  width: auto;
+  background-color: #1d2830;
+  border-top: 1px solid #ffffff;
+  color: #f0ebfa;
+}
+.insta {
+  height: 25px;
+  width: 25px;
+  background-color: #35414b;
+  color: #e1e5ea;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (width < 400px) {
+  .top-content > p {
+    width: auto;
+  }
+  .top-content .try-to-free {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+  }
+  .try-to-free > button {
+    width: 100%;
+  }
+
+  .company-logo-asset {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .survay-team {
+    width: 100%;
+  }
+
+  .team {
+    padding: 10px;
+    border: none;
+    border-bottom: 8px solid #794cff;
+  }
+  .collaps-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .survay-test {
+    width: auto;
+  }
+
+  .collabration {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .collabration-img {
+    display: flex;
+    justify-content: center;
+  }
+  .adverticement {
+    flex-direction: column;
+  }
+  .customer-photo {
+    flex-direction: column;
+  }
+  .footer-section {
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 40px;
+  }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+}
+
+@media (width > 400px) and (width < 768px) {
+  .collaps-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .company-logo-asset {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .survay-test {
+    width: auto;
+  }
+}

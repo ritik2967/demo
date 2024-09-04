@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 45vw;
+        width: auto;
+        color: white;
+        background-image: url(./images/3.jpg);
+        clip-path: polygon(50% 0%, 100% 0, 100% 78%, 50% 100%, 0 78%, 0 0);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      .navbar {
+        height: auto;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        justify-content: space-evenly;
+        color: rgba(36, 1, 1, 0.967);
+      }
+      .logo {
+        height: 30px;
+        width: 60px;
+        background-image: url(./images/gg.svg);
+        background-position: center;
+        background-size: cover;
+      }
+      ul > li {
+        list-style: none;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .mid-content {
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 10px;
+        padding-top: 150px;
+      }
+      .content {
+        width: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+      .buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .buttons :nth-child(1) {
+        height: 25px;
+        width: 150px;
+        background-color: red;
+        color: white;
+        border: none;
+      }
+      .buttons :nth-child(2) {
+        height: 25px;
+        width: 150px;
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+      }
+      .right-arrow {
+        height: 30px;
+        width: 30px;
+        background-color: orangered;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .left-arrow {
+        height: 30px;
+        width: 30px;
+        background-color: wheat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .icon {
+        height: 35px;
+        width: 35px;
+        background-color: wheat;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 48.8%;
+        bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="#" alt="" />
+        </div>
+        <div class="links">
+          <ul>
+            <li style="color: orangered">Home</li>
+            <li>About Us</li>
+            <li>Portfolio</li>
+            <li>Pricing</li>
+            <li>Team</li>
+            <li>Blog</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mid-content">
+        <div class="left-arrow">
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="content">
+          <span>Our clients are our first priority</span>
+          <h1>WELCOME TO SKY</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quasi
+            officia nihil eaque tempora quos quam culpa non facilis ipsa dolore,
+            pariatur adipisci labore repellat hic possimus, facere doloremque
+            ducimus.
+          </p>
+          <div class="buttons">
+            <button>GET STARTED NOW</button>
+            <button>LEARN MORE</button>
+          </div>
+        </div>
+        <div class="right-arrow">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+    </div>
+    <div class="icon">
+      <i class="fa-solid fa-anchor"></i>
+    </div>
+  </body>
+</html>

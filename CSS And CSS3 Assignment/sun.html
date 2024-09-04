@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main {
+        height: 700px;
+        width: auto;
+        background-image: linear-gradient(orange, yellow);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .sun {
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        background-color: yellow;
+        position: relative;
+      }
+      .orange {
+        height: 270px;
+        width: 270px;
+        background-color: orange;
+        border-radius: 50%;
+        position: absolute;
+        left: 40%;
+        top: 28%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="sun"></div>
+      <div class="orange"></div>
+    </div>
+  </body>
+</html>
