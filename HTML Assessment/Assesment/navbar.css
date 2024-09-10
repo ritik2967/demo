@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  height: auto;
+  width: auto;
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+.links {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  gap: 25px;
+}
+.service > select {
+  background-color: blue;
+  color: white;
+}
+
+.links > :hover {
+  color: orangered;
+}
+
+button {
+  width: 50px;
+  height: 25px;
+}
