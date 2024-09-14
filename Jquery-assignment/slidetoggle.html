@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: auto;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .sliders {
+        height: 400px;
+        width: 100vw;
+        background-color: yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .sliders > a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 30px;
+        border: 1px solid black;
+        padding: 10px;
+      }
+      .slide-btns > button {
+        height: 40px;
+        width: 90px;
+        background-color: yellowgreen;
+        border: none;
+        border-radius: 22px;
+        color: black;
+        font-family: sans-serif;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="sliders">
+        <a href="#">Slide Toggle</a> <a href="#">Slide Up</a>
+        <a href="#">Slide Down</a>
+      </div>
+      <div class="slide-btns">
+        <button class="slide-up">SlideUp</button>
+        <button class="slide-down">slideDown</button>
+        <button class="slide-toggle">SlideToggle</button>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script>
+    $(document).ready(function () {
+      $(".slide-up").click(function () {
+        $(".sliders").slideUp();
+      });
+      $(".slide-down").click(function () {
+        $(".sliders").slideDown();
+      });
+      $(".slide-toggle").click(function () {
+        $(".sliders").slideToggle(1000);
+      });
+    });
+  </script>
+</html>

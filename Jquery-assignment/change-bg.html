@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        height: 100vh;
+        width: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .box {
+        height: 600px;
+        width: 200px;
+        border: 3px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" style="background-color: red"></div>
+      <div class="box" style="background-color: purple"></div>
+      <div class="box" style="background-color: blue"></div>
+      <div class="box" style="background-color: yellow"></div>
+      <div class="box" style="background-color: green"></div>
+      <div class="box" style="background-color: orange"></div>
+      <div class="box" style="background-color: black"></div>
+    </div>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script>
+    $(document).ready(function () {
+      $(".box").click(function () {
+        $("body").css("background-color", this.style["background-color"]);
+      });
+    });
+  </script>
+</html>
