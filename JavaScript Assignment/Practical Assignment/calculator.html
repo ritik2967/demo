@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: linear-gradient(to right, black, gray);
+      }
+      form {
+        height: 700px;
+        width: 500px;
+        background-image: linear-gradient(to top, red, blue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: start;
+        flex-direction: column;
+        font-family: sans-serif;
+        color: white;
+        font-weight: bold;
+        gap: 10px;
+        margin-left: 35%;
+        margin-top: 20px;
+      }
+      input {
+        height: 25px;
+        width: 200px;
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+      }
+      .btns > button {
+        height: 25px;
+        width: 35px;
+        font-size: 20px;
+        font-family: sans-serif;
+        font-weight: bold;
+        background-color: black;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      .btns > button:hover {
+        background-image: linear-gradient(to right, black, gray);
+      }
+      .btns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="#">
+        <div>
+          <label for="#">Enter Value 1</label>
+        </div>
+        <input type="number" name="value1" id="value1" /> <br /><br />
+        <div>
+          <label for="#">Enter Value 2</label>
+        </div>
+        <input type="number" name="value2" id="value2" /><br /><br />
+        <div class="btns">
+          <button type="button" onclick="addition()">+</button>
+          <button type="button" onclick="substraction()">-</button>
+          <button type="button" onclick="multiplication()">*</button>
+          <button type="button" onclick="division()">/</button>
+        </div>
+        <br />
+        <div>
+          <label for="#">Answere Is</label>
+        </div>
+        <input type="number" name="ans" id="ans" readonly />
+      </form>
+    </div>
+  </body>
+  <script>
+    function addition() {
+      let a = parseInt(document.getElementById("value1").value);
+      let b = parseInt(document.getElementById("value2").value);
+
+      let display = a + b;
+      document.getElementById("ans").value = display;
+    }
+
+    function substraction() {
+      let a = parseInt(document.getElementById("value1").value);
+      let b = parseInt(document.getElementById("value2").value);
+
+      let sub = a - b;
+      document.getElementById("ans").value = sub;
+    }
+    function multiplication() {
+      let a = parseInt(document.getElementById("value1").value);
+      let b = parseInt(document.getElementById("value2").value);
+
+      let multi = a * b;
+      document.getElementById("ans").value = multi;
+    }
+    function division() {
+      let a = parseInt(document.getElementById("value1").value);
+      let b = parseInt(document.getElementById("value2").value);
+
+      let divi = a / b;
+      document.getElementById("ans").value = divi;
+    }
+  </script>
+</html>
+.

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debounce Example</title>
+  </head>
+  <body>
+    <h1>Debounce Search</h1>
+    <input type="text" id="searchInput" placeholder="Type to search..." />
+    <p id="result"></p>
+
+    <script>
+      function debounce(func, delay) {
+        let timeoutId;
+        return function (...args) {
+          clearTimeout(timeoutId);
+          timeoutId = setTimeout(() => func.apply(this, args), delay);
+        };
+      }
+
+      function fetchSearchResults(query) {
+        document.getElementById(
+          "result"
+        ).textContent = `You typed... "${query}"...`;
+
+        setTimeout(() => {
+          document.getElementById(
+            "result"
+          ).textContent = `Results for "${query}"`;
+        }, 500);
+      }
+
+      const debouncedSearch = debounce(fetchSearchResults, 500);
+
+      document
+        .getElementById("searchInput")
+        .addEventListener("input", (event) => {
+          debouncedSearch(event.target.value);
+        });
+    </script>
+  </body>
+</html>

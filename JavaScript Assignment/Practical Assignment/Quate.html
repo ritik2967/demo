@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quote Generator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: blue;
+      }
+      .quote-container {
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+      }
+      .quote {
+        font-size: 1.2em;
+        color: #333;
+        margin: 0;
+      }
+      .author {
+        font-size: 1em;
+        color: #666;
+        margin-top: 10px;
+      }
+      button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 1em;
+        background-color: green;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quote-container">
+      <p class="quote" id="quote">Click the button to see a random quote</p>
+      <p class="author" id="author"></p>
+      <button onclick="generateRandomQuote()">New Quote</button>
+    </div>
+
+    <script>
+      const quotes = [
+        {
+          quote: "The best way to predict the future is to create it.",
+          author: "Peter Drucker",
+        },
+        {
+          quote: "You miss 100% of the shots you don’t take.",
+          author: "Wayne Gretzky",
+        },
+        {
+          quote:
+            "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+          author: "Winston Churchill",
+        },
+        {
+          quote: "Believe you can and you’re halfway there.",
+          author: "Theodore Roosevelt",
+        },
+        {
+          quote: "Act as if what you do makes a difference. It does.",
+          author: "William James",
+        },
+      ];
+
+      function generateRandomQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        const randomQuote = quotes[randomIndex];
+
+        document.getElementById("quote").textContent = `"${randomQuote.quote}"`;
+        document.getElementById(
+          "author"
+        ).textContent = `- ${randomQuote.author}`;
+      }
+    </script>
+  </body>
+</html>

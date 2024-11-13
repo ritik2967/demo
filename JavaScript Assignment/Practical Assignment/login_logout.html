@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login and Logout System</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f9;
+      }
+      .container {
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        text-align: center;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4caf50;
+        color: #fff;
+        font-size: 1em;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      .message {
+        margin-top: 15px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Login Form -->
+    <div class="container" id="loginContainer">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="user" />
+      <input type="password" id="password" placeholder="password" />
+      <button onclick="login()">Login</button>
+      <p class="message" id="message"></p>
+    </div>
+
+    <!-- Welcome Page (hidden initially) -->
+    <div class="container" id="welcomeContainer" style="display: none">
+      <h2>Welcome, <span id="user"></span>!</h2>
+      <p>We are glad to have you back.</p>
+      <button onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+      // Sample credentials for demonstration
+      const sampleUsername = "user";
+      const samplePassword = "password";
+
+      // Login function
+      function login() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const message = document.getElementById("message");
+
+        // Check if entered credentials match the sample credentials
+        if (username === sampleUsername && password === samplePassword) {
+          // Show welcome container and hide login container
+          document.getElementById("loginContainer").style.display = "none";
+          document.getElementById("welcomeContainer").style.display = "block";
+          document.getElementById("user").textContent = username;
+        } else {
+          message.textContent =
+            "Invalid username or password. Please try again.";
+          message.style.color = "red";
+        }
+      }
+
+      // Logout function
+      function logout() {
+        // Hide welcome container and show login container
+        document.getElementById("welcomeContainer").style.display = "none";
+        document.getElementById("loginContainer").style.display = "block";
+
+        // Clear login form and message
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("message").textContent = "";
+      }
+    </script>
+  </body>
+</html>

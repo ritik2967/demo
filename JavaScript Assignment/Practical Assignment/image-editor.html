@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Editor with Filters</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f9;
+        flex-direction: column;
+      }
+      h2 {
+        margin-bottom: 20px;
+      }
+      .editor-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 600px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      #imagePreview {
+        max-width: 100%;
+        max-height: 400px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+      .slider-container {
+        width: 100%;
+        margin: 10px 0;
+      }
+      input[type="range"] {
+        width: 100%;
+      }
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: inline-block;
+      }
+      button {
+        padding: 10px 20px;
+        margin-top: 20px;
+        border: none;
+        background-color: #4caf50;
+        color: #fff;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="editor-container">
+      <h2>Image Editor</h2>
+      <input type="file" id="imageInput" accept="image/*" />
+      <img id="imagePreview" src="" alt="Image Preview" />
+
+      <!-- Filters -->
+      <div class="slider-container">
+        <label for="brightness">Brightness</label>
+        <input type="range" id="brightness" min="0" max="200" value="100" />
+      </div>
+
+      <div class="slider-container">
+        <label for="contrast">Contrast</label>
+        <input type="range" id="contrast" min="0" max="200" value="100" />
+      </div>
+
+      <div class="slider-container">
+        <label for="saturation">Saturation</label>
+        <input type="range" id="saturation" min="0" max="200" value="100" />
+      </div>
+
+      <div class="slider-container">
+        <label for="blur">Blur</label>
+        <input type="range" id="blur" min="0" max="10" value="0" />
+      </div>
+
+      <div class="slider-container">
+        <label for="grayscale">Grayscale</label>
+        <input type="range" id="grayscale" min="0" max="100" value="0" />
+      </div>
+
+      <button onclick="resetFilters()">Reset</button>
+    </div>
+
+    <script>
+      const imageInput = document.getElementById("imageInput");
+      const imagePreview = document.getElementById("imagePreview");
+
+      const brightness = document.getElementById("brightness");
+      const contrast = document.getElementById("contrast");
+      const saturation = document.getElementById("saturation");
+      const blur = document.getElementById("blur");
+      const grayscale = document.getElementById("grayscale");
+
+      // Handle image upload
+      imageInput.addEventListener("change", function (e) {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+
+        reader.onload = function (event) {
+          imagePreview.src = event.target.result;
+        };
+
+        if (file) {
+          reader.readAsDataURL(file);
+        }
+      });
+
+      function applyFilters() {
+        const filterValue = `
+        brightness(${brightness.value}%) 
+        contrast(${contrast.value}%) 
+        saturate(${saturation.value}%) 
+        blur(${blur.value}px) 
+        grayscale(${grayscale.value}%)
+      `;
+        imagePreview.style.filter = filterValue;
+      }
+
+      brightness.addEventListener("input", applyFilters);
+      contrast.addEventListener("input", applyFilters);
+      saturation.addEventListener("input", applyFilters);
+      blur.addEventListener("input", applyFilters);
+      grayscale.addEventListener("input", applyFilters);
+
+      function resetFilters() {
+        brightness.value = 100;
+        contrast.value = 100;
+        saturation.value = 100;
+        blur.value = 0;
+        grayscale.value = 0;
+
+        applyFilters();
+      }
+
+      applyFilters();
+    </script>
+  </body>
+</html>

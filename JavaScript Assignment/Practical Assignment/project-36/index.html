@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Strength Indicator</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .container h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .password-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .password-container input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      right: 10px;
+      font-size: 14px;
+      color: #28a745;
+      cursor: pointer;
+      background: none;
+      border: none;
+      outline: none;
+    }
+
+    .strength-bar {
+      display: flex;
+      margin-top: 5px;
+    }
+
+    .strength-bar div {
+      height: 6px;
+      flex: 1;
+      margin-right: 3px;
+      background-color: #ddd;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .strength-text {
+      margin-top: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    /* Strength colors */
+    .strength-weak {
+      background-color: #ff4d4d !important;
+    }
+
+    .strength-medium {
+      background-color: #ffbf00 !important;
+    }
+
+    .strength-strong {
+      background-color: #28a745 !important;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Password Strength Indicator</h2>
+  <div class="password-container">
+    <input type="password" id="passwordInput" placeholder="Enter your password" oninput="checkPasswordStrength()">
+    <button class="toggle-btn" onclick="togglePassword()">SHOW</button>
+  </div>
+  <div class="strength-bar">
+    <div id="bar1"></div>
+    <div id="bar2"></div>
+    <div id="bar3"></div>
+  </div>
+  <div class="strength-text" id="strengthText"></div>
+</div>
+
+<script src="index.js"></script>
+
+</body>
+</html>

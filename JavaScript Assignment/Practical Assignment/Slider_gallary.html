@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Review Card Slider</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f9;
+      }
+      .slider-container {
+        width: 90%;
+        max-width: 800px;
+        overflow: hidden;
+        position: relative;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+      .slider {
+        display: flex;
+        transition: transform 0.4s ease;
+      }
+      .review-card {
+        flex: 1 0 100%;
+        padding: 20px;
+        text-align: center;
+        color: #333;
+      }
+      .review-card h3 {
+        margin-bottom: 10px;
+        font-size: 1.5em;
+        color: #4caf50;
+      }
+      .review-card p {
+        font-size: 1em;
+        line-height: 1.5;
+      }
+      .review-card .author {
+        margin-top: 15px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      /* Navigation Buttons */
+      .nav-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2em;
+        color: #4caf50;
+        cursor: pointer;
+        background: none;
+        border: none;
+        z-index: 10;
+      }
+      .nav-button.left {
+        left: 10px;
+      }
+      .nav-button.right {
+        right: 10px;
+      }
+      .nav-button:hover {
+        color: #388e3c;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .review-card h3 {
+          font-size: 1.3em;
+        }
+        .review-card p {
+          font-size: 0.9em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider-container">
+      <button class="nav-button left" onclick="prevSlide()">&#10094;</button>
+      <div class="slider" id="slider">
+        <div class="review-card">
+          <h3>Great Service!</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+            commodo eros nec malesuada pretium.
+          </p>
+          <p class="author">- John Doe</p>
+        </div>
+        <div class="review-card">
+          <h3>Highly Recommended</h3>
+          <p>
+            Aliquam tincidunt, purus sit amet feugiat vestibulum, leo eros
+            fermentum lacus, eu pretium purus urna et sapien.
+          </p>
+          <p class="author">- Jane Smith</p>
+        </div>
+        <div class="review-card">
+          <h3>Exceeded Expectations</h3>
+          <p>
+            Nullam facilisis, nibh quis venenatis commodo, justo massa suscipit
+            ex, sed cursus erat orci ut augue.
+          </p>
+          <p class="author">- Mark Wilson</p>
+        </div>
+      </div>
+      <button class="nav-button right" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <script>
+      let currentIndex = 0;
+      const slider = document.getElementById("slider");
+      const reviews = document.querySelectorAll(".review-card");
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % reviews.length;
+        updateSliderPosition();
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + reviews.length) % reviews.length;
+        updateSliderPosition();
+      }
+
+      function updateSliderPosition() {
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+    </script>
+  </body>
+</html>

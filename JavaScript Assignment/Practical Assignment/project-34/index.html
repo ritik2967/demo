@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag and Drop Containers</title>
+  <style>
+    
+    .container {
+      display: inline-block;
+      width: 45%;
+      min-height: 200px;
+      margin: 10px;
+      padding: 10px;
+      border: 2px dashed #ccc;
+      vertical-align: top;
+    }
+    .draggable-item {
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      margin-bottom: 10px;
+      cursor: move;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="container1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag1">Drag me 1</div>
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag3">Drag me 3</div>
+  </div>
+
+  <div class="container" id="container2" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <div class="draggable-item" draggable="true" ondragstart="drag(event)" id="drag2">Drag me 2</div>
+  </div>
+
+<script src="index.js"></script>
+
+</body>
+</html>

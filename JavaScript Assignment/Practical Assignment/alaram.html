@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Alarm Clock</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f8ff;
+      }
+      .clock-container {
+        text-align: center;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+      }
+      .time-display {
+        font-size: 2em;
+        color: #333;
+        margin-bottom: 10px;
+      }
+      input,
+      button {
+        padding: 10px;
+        font-size: 1em;
+        margin: 10px 0;
+        width: 100%;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      #alarmMessage {
+        margin-top: 15px;
+        color: #d9534f;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock-container">
+      <div class="time-display" id="currentTime">00:00:00</div>
+      <input type="time" id="alarmTime" />
+      <button onclick="setAlarm()">Set Alarm</button>
+      <p id="alarmMessage"></p>
+    </div>
+
+    <audio
+      id="alarmSound"
+      src="https://www.soundjay.com/button/sounds/beep-07.mp3"
+      preload="auto"
+    ></audio>
+
+    <script>
+      function updateClock() {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, "0");
+        const minutes = String(now.getMinutes()).padStart(2, "0");
+        const seconds = String(now.getSeconds()).padStart(2, "0");
+        document.getElementById(
+          "currentTime"
+        ).textContent = `${hours}:${minutes}:${seconds}`;
+      }
+      setInterval(updateClock, 1000);
+
+      let alarmTime = null;
+      let alarmTimeout = null;
+
+      function setAlarm() {
+        const alarmInput = document.getElementById("alarmTime").value;
+        if (alarmInput) {
+          alarmTime = alarmInput;
+          document.getElementById(
+            "alarmMessage"
+          ).textContent = `Alarm set for ${alarmTime}`;
+        }
+      }
+
+      setInterval(() => {
+        const now = new Date();
+        const currentTime = `${String(now.getHours()).padStart(
+          2,
+          "0"
+        )}:${String(now.getMinutes()).padStart(2, "0")}`;
+
+        if (alarmTime === currentTime) {
+          triggerAlarm();
+        }
+      }, 1000);
+
+      function triggerAlarm() {
+        const alarmSound = document.getElementById("alarmSound");
+        alarmSound.play();
+        document.getElementById("alarmMessage").textContent =
+          "⏰ Alarm ringing!";
+
+        alarmTime = null;
+      }
+    </script>
+  </body>
+</html>

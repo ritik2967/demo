@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Throttle Example</title>
+    <style>
+      #coordinates {
+        font-size: 1.5em;
+        margin-top: 20px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mouse Coordinates</h1>
+    <p id="coordinates">Move the mouse to see coordinates</p>
+
+    <script>
+      function throttle(func, delay) {
+        let lastCall = 0;
+
+        return function (...args) {
+          const now = new Date().getTime();
+
+          if (now - lastCall >= delay) {
+            lastCall = now;
+            func.apply(this, args);
+          }
+        };
+      }
+
+      function displayCoordinates(event) {
+        const x = event.clientX;
+        const y = event.clientY;
+        document.getElementById("coordinates").textContent = `X: ${x}, Y: ${y}`;
+      }
+
+      const throttledDisplay = throttle(displayCoordinates, 100);
+
+      document.addEventListener("mousemove", throttledDisplay);
+    </script>
+  </body>
+</html>

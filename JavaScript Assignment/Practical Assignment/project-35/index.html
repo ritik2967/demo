@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Input Field with Success Icon</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #eaf4fd;
+    }
+
+    .input-container {
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px 15px;
+      width: 100%;
+      max-width: 400px;
+      position: relative;
+    }
+
+    .input-container input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 16px;
+      padding: 10px;
+      color: #555;
+    }
+
+    .input-container input::placeholder {
+      color: #bbb;
+    }
+
+    .input-container .icon {
+      font-size: 20px;
+      color: #bbb;
+      margin-left: 10px;
+    }
+
+    .success-icon {
+      font-size: 20px;
+      color: #28a745; /* Green color for success */
+      position: absolute;
+      right: 15px;
+      display: none; /* Hidden by default */
+    }
+    #icon{
+      color:#bbb;
+    }
+  </style>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<div class="input-container">
+  <input type="email" id="emailInput" placeholder="Enter your email" oninput="validateEmail()">
+  <i class="fa-regular fa-envelope"  id="icon"></i>
+
+</div>
+
+<script src="index.js">
+  
+</script>
+
+</body>
+</html>

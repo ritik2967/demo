@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    .cart-table { width: 100%; border-collapse: collapse; }
+    .cart-table th, .cart-table td { padding: 10px; text-align: center; border: 1px solid #ddd; }
+    .cart-table img { width: 50px; height: 50px; }
+    .remove-btn { background-color: #ff5722; color: white; padding: 5px 10px; cursor: pointer; }
+    .total-row td { font-weight: bold; text-align: right; }
+  </style>
+</head>
+<body>
+  <table class="cart-table">
+    <thead>
+      <tr>
+        <th>Product Info</th>
+        <th>Quantity</th>
+        <th>Price (per unit)</th>
+        <th>Price (subtotal)</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="productList"></tbody>
+    <tfoot>
+      <tr class="total-row">
+        <td colspan="3">Total</td>
+        <td colspan="2" id="totalPrice">$0.00</td>
+      </tr>
+    </tfoot>
+  </table>
+  <script src="index.js"></script>
+</body>
+</html>

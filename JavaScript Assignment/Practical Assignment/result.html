@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #all-value {
+        height: 50px;
+        width: 200px;
+        border: 2px solid black;
+        font-family: sans-serif;
+        color: red;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#">
+      <label for="#">Mark 1</label>
+      <input type="number" name="mark1" id="mark1" /> <br />
+      <br />
+
+      <label for="#">Mark 2</label>
+      <input type="number" name="mark2" id="mark2" /> <br />
+      <br />
+
+      <label for="#">Mark 3</label>
+      <input type="number" name="mark3" id="mark3" /> <br />
+      <br />
+
+      <button type="button" onclick="result()">Generate Result</button>
+      <br /><br />
+
+      <input
+        type="number"
+        name="demo"
+        id="demo"
+        placeholder="Total is hear.."
+        readonly
+      />
+      <br />
+      <br />
+
+      <input
+        type="number"
+        name="per"
+        id="per"
+        placeholder="Per is hear.."
+        readonly
+      />
+      <br />
+      <br />
+
+      <div id="all-value"></div>
+    </form>
+  </body>
+  <script>
+    function result() {
+      let a = parseInt(document.getElementById("mark1").value);
+      let b = parseInt(document.getElementById("mark2").value);
+      let c = parseInt(document.getElementById("mark3").value);
+
+      let total = a + b + c;
+      document.getElementById("demo").value = total;
+
+      let per = total / 3;
+      document.getElementById("per").value = per;
+
+      if (per >= 80) {
+        alert("Congratulations Your Grade is A+ !");
+      } else if (per >= 70 && per < 80) {
+        document.getElementById("all-value").innerHTML = "Your Grade is A";
+      } else if (per >= 60 && per < 70) {
+        document.getElementById("all-value").innerHTML = "Your Grade is B";
+      } else if (per >= 50 && per < 40) {
+        document.getElementById("all-value").innerHTML = "Your Grade is C";
+      } else if (per >= 40 && per < 30) {
+        document.getElementById("all-value").innerText = "You Are Pass";
+      } else {
+        alert("Sorry, better luck next time ! cauzz You are fail..");
+      }
+    }
+  </script>
+</html>
