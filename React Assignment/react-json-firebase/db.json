@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Rutvik Makwana",
+      "email": "rutvik@gmail.com",
+      "age": 21
+    },
+    {
+      "id": "2",
+      "name": "Raj Parmar Rameshbhai",
+      "email": "raj12@gmail.com",
+      "age": "21"
+    },
+    {
+      "id": "3",
+      "name": "Dhruv Purohit",
+      "email": "dhruv@gmail.com",
+      "age": 22
+    },
+    {
+      "id": "4",
+      "name": "Harsh Joshi",
+      "email": "harhs@gmail.com",
+      "age": 15
+    },
+    {
+      "id": "5",
+      "name": "Vinay Chauhan",
+      "email": "niga@gmail.com",
+      "age": 23
+    }
+  ]
+}
